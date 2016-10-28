@@ -1,0 +1,37 @@
+g++ -c Student.cpp
+g++ -c SortedList.cpp
+g++ Student.o SortedList.o studentDB.o -o runDB
+./runDB
+
+a 123456
+a 111222
+a 555555
+u 123456 302 15 Fall 3 A
+u 123456 367 15 Fall 3 b
+u 123456 402 15 Fall 3 A
+u 111222 302 15 Fall 3 A
+u 111222 367 15 Fall 3 A
+u 555555 302 15 Fall 3 A
+
+
+r 302 15 Fall
+
+c 111222 123456 555555
+
+   //sorting
+    for (int j = 0; j < i-1; j++){
+
+cout<< "3" << endl;
+
+       for(int k = 0; k < i-1; k++){
+cout<< "7" << endl;
+           if(stuHead[j]->getID() > stuHead[k + 1]->getID()){
+cout<< "8" << endl;
+               Student *curr = stuHead [k + 1];
+               stuHead [k + 1]= stuHead [j];
+               stuHead [j] = curr;
+           }
+    }
+
+
+bool func(Student **stuHead1, Student **stuHead2){return (stuHead1->getID() < stuHead2->getID());}

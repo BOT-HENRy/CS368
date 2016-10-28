@@ -1,0 +1,135 @@
+Annotated example (lecture 2)
+
+Since we didn't have enough time in class to talk about the handout, I am posting an annotated version of the file. If you have questions or remarks about the code, you can post it here. Understanding this example will certainly help you with your assignment.
+
+// Recall from the first lecture that in order to use C++ STL facilities, we should include the 
+// corresponding headers in which the declarations of those objects lie. iostream file is necessary
+// for the cout and cin class instances. 
+#include <iostream>
+#include <vector>
+
+// using statement introduces the names in the std namespace to the current scope.
+// std namespaces encapsulates the constructs in the standard template library (STL)
+// which includes cin and cout objects.
+using namespace std;
+
+// We define two enums to represent the suits and the nonnumeric ranks in a deck of cards
+
+// Note that the Suits enumeration does not determine the integer values associated with the names.
+//Hence clubs == 0 and the rest of the items will have the consecutive integers as associated values.
+enum Suits         { clubs, diamonds, hearts, spades };
+
+// We know that the rank of jack is 11, hence set its value accordingly. Similarly, we set the values 
+// of other cards.
+// You may wonder why we do not have names associated with integral values in a suit (numbers between 2-9).
+// The reason is that an instance of FaceCardsRanks is going to have an integer value. And it does not 
+// have to be one of the values in its definition. So we can simply test its numerical value.
+enum FaceCardRanks { jack = 11, queen = 12, king = 13, 
+                     ace = 1 };
+
+ // We define the Card structure. It is a composite type in the sense it aggragates variables of
+ // multiple types (in this case, Card contains a Suits and a int variable).
+struct Card {
+	// The variables suit and rank have public access by default.
+    Suits suit;
+    int rank;
+// Note the semicolon after the closing curly brace. C++ syntax requires it.
+};
+
+// The void return type in the function signature (the first line of the function definition) means that
+// printCard does not return a value. Hence a statement like 
+//		a = printCard(c); //will result in error
+void printCard(Card c) {
+	// Recall from the lecture that we can switch on the value of an enum instance.
+    switch (c.rank) {     	
+		//c.rank is an integer value but we output the name on corresponding the card
+		//Ace, jack, queen and king are special cases so we handle them with different
+		//case clauses
+        case 1:  cout << 'A'; break;
+        case 11: cout << 'J'; break;
+        case 12: cout << 'Q'; break;
+        case 13: cout << 'K'; break;
+
+        // If the value of c.rank is not equal to any of {1, 11, 12, 13}, the default clause will be executed
+        // in which case we output the number on the card
+        default: cout << c.rank; break;
+
+        //What happens if we replace the last two statements with:
+	    //    case 13: cout << 'K'; // We deleted the break; statement
+		//    default: cout << c.rank; break;
+
+
+    }
+    switch (c.suit) { 
+        case hearts:   cout << 'H'; break; 
+        // Note that the previous line can be replaced with 
+        //		case 2:   cout << 'H'; 
+        // since hearts is an integer value, 2.
+        case spades:   cout << 'S'; break;
+        case clubs:    cout << 'C'; break;
+        case diamonds: cout << 'D'; break;
+     }
+}
+
+// the main function variant we use does not accept command line parameters
+int main() {
+
+    Card c1, c2, c3;
+
+
+   	// We initialize c1 and c2 but not c3. How does that effect output?
+    c1.suit = hearts;
+    c1.rank = 5;
+
+    c2.suit = diamonds;
+    // c2.rank is an integer variable but we initialize it with an enum (FaceCardRanks) value.
+    // This is possible since enums are integer types too. But the C++ standard
+    // does not define the underlying integer type used for enums.
+    // Hence it can be a long, short, int etc. 
+    c2.rank = jack;
+
+    cout << "c1.suit is: " << c1.suit
+         << "\nc1.rank is: " << c1.rank << endl;
+
+    cout << "c1 is: ";
+    printCard(c1);
+    cout << endl;
+
+    cout << "c2.suit is: " << c2.suit
+         << "\nc2.rank is: " << c2.rank << endl;
+
+    cout << "c2 is: ";
+    printCard(c2);
+    cout << endl;
+
+    cout << "c3.suit is: " << c3.suit
+         << "\nc3.rank is: " << c3.rank << endl;
+
+    cout << "c3 is: ";
+    printCard(c3);
+    cout << endl;
+
+    // Note the syntax for two dimensional arrays, the number of suits and the number of cards in each suit
+    // are known in advance. Hence the size of the array is known during compile time. 
+    Card deck[4][13];
+
+    // Fill it 
+    for (int s = 0; s < 4; s++) {
+        for (int val = 1; val <= 13; val++) {
+        	// Note the explicit type cast from an integer to an enum on the RHS of the assignment.
+            deck[s][val-1].suit = Suits(s);
+            deck[s][val-1].rank = val;
+        }  
+    } 
+
+    // Print it out
+    cout << endl << "Printing 2-d array deck: " << endl;
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 13; j++) {
+            printCard(deck[i][j]);
+            cout << ", ";
+        }
+        // endl prints a newline (going to the next line) and flushes the output on the terminal immediately.
+        cout << endl;
+    }
+}

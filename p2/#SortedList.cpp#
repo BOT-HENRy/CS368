@@ -1,0 +1,235 @@
+/*******************************************************************************
+ * Author:        Yizhe Qu	
+ * CS Login:      qu
+ * 
+ * Pair Partner:  (name of your pair programming partner, if applicable)
+ * CS Login:      (your partner's CS login name)
+ * 
+ * Credits:       none
+ * 
+ * Course:        CS 368, Fall 2015
+ * Assignment:    Programming Assignment 2
+ ******************************************************************************/
+ 
+#include <iostream>
+#include "SortedList.h"
+
+using namespace std;
+
+SortedList::SortedList(){
+    head = NULL;
+}
+
+bool SortedList::insert(Student *s){
+    int check = 0;
+    Listnode *curP = head;
+    //if list is empty
+    if(head == NULL){
+       Listnode *curr = new Listnode;
+       curr->next = NULL;
+       curr->student = s;
+       head = curr;
+       return true; 
+    }
+    //searching through the list
+    if(find(s->getID()) == NULL){
+        curP = head;
+        //when head needs to be replaced
+        if(head->student->getID() > s->getID()){
+            Listnode *curr = new Listnode;
+            curr->next = head;
+            curr->student = s;
+            head = curr;
+            return true;
+        }
+        //when there's only one and needs to add at next
+        if(curP->next == NULL && curP->student->getID() < s->getID()){
+            Listnode *curr = new Listnode;
+            curr->next = NULL;
+            curr->student = s;
+            curP->next = curr;
+            return true;
+        }
+        //or search to find the position
+        while(curP->next != NULL){
+            if(curP->next->student->getID() > s->getID()){
+                Listnode *curr = new Listnode;
+                curr->next = curP->next;
+                curr->student = s;
+                curP->next = curr;
+                return true;
+            }   
+            curP = curP->next;
+            //if need to insert at last position
+            if(curP->next == NULL){
+                Listnode *curr = new Listnode;
+                curr->next = NULL;
+                curr->student = s;
+                curP->next = curr;
+                return true;
+            } 
+        }
+    }else{
+        check = 0;
+        return false;
+    }
+}
+
+Student * SortedList::find(int studentID){
+    Listnode *curP = head;
+    while(curP != NULL){        
+        if(curP->student->getID() == studentID){
+            return curP->student;
+        }
+        curP = curP->next;
+    }
+    return NULL;
+}
+
+Student * SortedList::remove(int studentID){
+    Listnode *curP = head;
+    Student *stu = new Student;
+    //if head is what we want
+    if(head->student->getID() == studentID){
+        stu = head->student;
+        head = curP->next;
+        return stu;
+    }
+    //if only 2 in the list and need to remove the second one
+    if(curP->next->next == NULL && curP->next->student->getID() == studentID){
+        stu = head->next->student;
+        head->next = NULL;
+        return stu;
+    }
+    //or go through
+    while(curP->next->next != NULL){
+        if(curP->next->student->getID() == studentID){
+            stu = curP->next->student;
+            curP->next = curP->next->next;
+            return stu;
+        }   
+        curP = curP->next;
+        //if need to remove at last position
+        if(curP->next->next == NULL){
+            if(curP->next->student->getID() == studentID){
+                stu = curP->next->student;
+                curP->next = NULL;
+                return stu;
+            }
+        }
+    }
+    return NULL;
+}
+
+int SortedList::getNStudents(int courseNumber, int inYear, Semester inSemester){
+    int numStu = 0;
+    Listnode *curP = head;
+    while(curP != NULL){
+        if(curP->student->tookCourse(courseNumber, inYear, inSemester)){
+            numStu++;
+        }
+        curP = curP->next;
+    }
+    return numStu;
+}
+//need to be in order!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Student ** SortedList::getClassRoster(int courseNumber, int inYear, Semester inSemester){
+//.............................
+    Student *stuClass = new Student [getNStudents(courseNumber, inYear, inSemester)];
+    Student **stuHead = &stuClass;
+    Listnode *curP = head;
+    int i = 0;
+    while(curP != NULL){
+        if(curP->student->tookCourse(courseNumber, inYear, inSemester)){
+            stuClass = curP->student;
+            stuHead[i] = curP->student;
+            i++;
+        }
+        curP = curP->next;
+    }
+    //sorting
+    for (int j = 0; j < i; j++){
+       for(int k = 0; k < i-1; k++){
+           if(stuHead[j]->getID() > stuHead[k + 1]->getID()){
+               Student *curr = stuHead [k + 1];
+               stuHead [k + 1]= stuHead [j];
+               stuHead [j] = curr;
+           }
+    }
+}
+
+    return stuHead;
+}
+
+void SortedList::printClassRoster(int courseNumber, int inYear, Semester inSemester){
+    Student **stuClass = getClassRoster(courseNumber, inYear, inSemester);
+    if(stuClass == NULL){
+        cout<< "Course " << courseNumber << " was not offered in " << inSemester << " of " << inYear << "." << endl;
+    }else{
+        int i = 0;
+        //!!!!!!!!!!!!!may be wrong
+        while(stuClass[i] != NULL){
+            cout<<stuClass[i]->getID()<<endl;
+            i++;
+        }
+    }
+}
+
+void SortedList::printClassmates(int * studentGroup, int nStudents){
+    //to store pair of students, 2 per pair
+    int *currL = new int[nStudents*nStudents];
+    int index = 0;
+
+    for(int i = 0; i < nStudents; i++){
+        Student *curr = find(studentGroup[i]);
+        CourseInfo const **currCourse = curr->getCourses();
+        for(int j = 1; j < nStudents; j++){
+            Student *cmp = find(studentGroup[j]);           
+            int k = 0;
+            while(currCourse[k] != NULL){
+                if(cmp->tookCourse(currCourse[k]->courseNumber,currCourse[k]->year,currCourse[k]->cSemester)){
+                    if(curr->getID() < cmp->getID()){
+                        currL[index] = curr->getID();
+                        currL[index + 1] = cmp->getID();
+                        index = index + 2;
+                    }else{
+                        currL[index] = cmp->getID();
+                        currL[index + 1] = curr->getID();
+                        index = index + 2;
+                    }
+                }
+                k++;
+            }
+        }
+    }
+//...............................................
+    //sort the student pairs
+    for (int y = 0; y < index; y+=2){
+       for(int z = 0; z < index; z+=2){
+           if(currL[y] > currL[z]){
+               int currP = currL [z];
+               currL [z]= currL [y];
+               currL [y] = currP;
+               currP = currL [z + 1];
+               currL [z + 1]= currL [y + 1];
+               currL [y + 1] = currP;
+           }
+       }
+    } 
+    currL[index] = NULL;  
+    //print
+    for(int d = 0; d < index; d+=2){
+        cout<< currL[d] << ", " << currL[d+1] << endl;
+    }
+}
+
+void SortedList::print() const{
+    Listnode *curP = head;
+    if(curP == NULL){
+        cout<< "Empty student list.\n";
+    }
+    while(curP != NULL){
+        cout<< curP->student->getID() << endl;
+        curP = curP->next;
+    }
+}

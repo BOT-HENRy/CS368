@@ -1,0 +1,261 @@
+Enter your commands at the > prompt:
+> Student added: 164408,0,0
+> Student added: 412052,0,0
+> Student added: 666394,0,0
+> Student added: 216177,0,0
+> Student added: 999412,0,0
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is no student with an ID #730798 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+164408,0,0
+216177,0,0
+412052,0,0
+666394,0,0
+999412,0,0
+> There is no student with an ID #705693 in the database
+> There is no student with an ID #730798 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+164408,0,0
+216177,0,0
+412052,0,0
+666394,0,0
+999412,0,0
+> Student 666394 record is updated: 666394,2,1
+> There is no student with an ID #730798 in the database
+> There is no student with an ID #705693 in the database
+> There is no student with an ID #705693 in the database
+> The roster of class 506 Spring 2011
+> Student database: 
+164408,0,0
+216177,0,0
+412052,0,0
+666394,2,1
+999412,0,0
+> Student database: 
+164408,0,0
+216177,0,0
+412052,0,0
+666394,2,1
+999412,0,0
+> Student database: 
+164408,0,0
+216177,0,0
+412052,0,0
+666394,2,1
+999412,0,0
+> Student database: 
+164408,0,0
+216177,0,0
+412052,0,0
+666394,2,1
+999412,0,0
+> Student added: 705693,0,0
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is no student with an ID #730798 in the database
+> There is no student with an ID #730798 in the database
+> Student added: 730798,0,0
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+164408,0,0
+216177,0,0
+412052,0,0
+666394,2,1
+705693,0,0
+730798,0,0
+999412,0,0
+> Student 705693 record is updated: 705693,1,2
+> The roster of class 724 Spring 2012
+> Student 999412 record is updated: 999412,4,0
+> Student 705693 record is updated: 705693,4,0.5
+> Student 999412 record is updated: 999412,8,0.5
+> Student 164408 record is updated: 164408,4,2
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+164408,4,2
+216177,0,0
+412052,0,0
+666394,2,1
+705693,4,0.5
+730798,0,0
+999412,8,0.5
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 164408 record is updated: 164408,7,1.57143
+> Student database: 
+164408,7,1.57143
+216177,0,0
+412052,0,0
+666394,2,1
+705693,4,0.5
+730798,0,0
+999412,8,0.5
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> The roster of class 581 Spring 2014
+> There is already a student with an ID #666394 in the database
+> Student 164408 record is updated: 164408,7,1.57143
+> Student 666394 record is updated: 666394,2,1
+> Student database: 
+164408,7,1.57143
+216177,0,0
+412052,0,0
+666394,2,1
+705693,4,0.5
+730798,0,0
+999412,8,0.5
+> Student 216177 record is updated: 216177,2,4
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,0,0
+666394,2,1
+705693,4,0.5
+730798,0,0
+999412,8,0.5
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is already a student with an ID #999412 in the database
+> The roster of class 581 Spring 2010
+> There is already a student with an ID #216177 in the database
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,0,0
+666394,2,1
+705693,4,0.5
+730798,0,0
+999412,8,0.5
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,0,0
+666394,2,1
+705693,4,0.5
+730798,0,0
+999412,8,0.5
+> Student 705693 record is updated: 705693,5,1.6
+> Student 705693 record is updated: 705693,6,1
+> There is already a student with an ID #730798 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,0,0
+666394,2,1
+705693,6,1
+730798,0,0
+999412,8,0.5
+> Student 216177 record is updated: 216177,2,4
+> There is already a student with an ID #705693 in the database
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,0,0
+666394,2,1
+705693,6,1
+730798,0,0
+999412,8,0.5
+> Student 412052 record is updated: 412052,1,2
+> Student 999412 record is updated: 999412,5,0
+> The roster of class 581 Spring 2015
+> There is already a student with an ID #164408 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is already a student with an ID #412052 in the database
+> List of student pairs in the group who took courses together:
+164408,705693
+> Student 666394 record is updated: 666394,3,1
+> Student 705693 record is updated: 705693,5,1.2
+> The roster of class 581 Fall 2014
+> Student 730798 record is updated: 730798,2,0
+> There is already a student with an ID #412052 in the database
+> Student 730798 record is updated: 730798,2,0
+> There is already a student with an ID #730798 in the database
+> Student 705693 record is updated: 705693,6,1.5
+> Student 730798 record is updated: 730798,2,4
+> Student 412052 record is updated: 412052,2,3
+> There is already a student with an ID #666394 in the database
+> The roster of class 581 Fall 2013
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 666394 record is updated: 666394,5,0.6
+> Student 999412 record is updated: 999412,8,1.5
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,2,3
+666394,5,0.6
+705693,6,1.5
+730798,2,4
+999412,8,1.5
+> List of student pairs in the group who took courses together:
+164408,705693
+705693,730798
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,2,3
+666394,5,0.6
+705693,6,1.5
+730798,2,4
+999412,8,1.5
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,2,3
+666394,5,0.6
+705693,6,1.5
+730798,2,4
+999412,8,1.5
+> Student 705693 record is updated: 705693,6,1.5
+> The roster of class 581 Spring 2015
+> Student 705693 record is updated: 705693,8,1.375
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,2,3
+666394,5,0.6
+705693,8,1.375
+730798,2,4
+999412,8,1.5
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,2,3
+666394,5,0.6
+705693,8,1.375
+730798,2,4
+999412,8,1.5
+> There is already a student with an ID #730798 in the database
+> Student 216177 record is updated: 216177,2,4
+> Student 216177 record is updated: 216177,2,4
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,2,3
+666394,5,0.6
+705693,8,1.375
+730798,2,4
+999412,8,1.5
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+164408,7,1.57143
+216177,2,4
+412052,2,3
+666394,5,0.6
+705693,8,1.375
+730798,2,4
+999412,8,1.5
+> Quitting

@@ -1,0 +1,303 @@
+Enter your commands at the > prompt:
+> Student added: 981181,0,0
+> Student added: 291084,0,0
+> Student added: 190430,0,0
+> Student added: 729968,0,0
+> Student added: 687825,0,0
+> There is no student with an ID #310204 in the database
+> There is no student with an ID #310204 in the database
+> The roster of class 497 Spring 2012
+> There is no student with an ID #199352 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is no student with an ID #310204 in the database
+> Student 729968 record is updated: 729968,3,4
+> Student 291084 record is updated: 291084,4,0
+> Student database: 
+190430,0,0
+291084,4,0
+687825,0,0
+729968,3,4
+981181,0,0
+> There is no student with an ID #199352 in the database
+> There is no student with an ID #199352 in the database
+> Student added: 310204,0,0
+> There is already a student with an ID #687825 in the database
+> The roster of class 497 Spring 2010
+> Student database: 
+190430,0,0
+291084,4,0
+310204,0,0
+687825,0,0
+729968,3,4
+981181,0,0
+> Student 310204 record is updated: 310204,3,0
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+190430,0,0
+291084,4,0
+310204,3,0
+687825,0,0
+729968,3,4
+981181,0,0
+> There is no student with an ID #199352 in the database
+> Student added: 199352,0,0
+> The roster of class 426 Spring 2012
+> There is already a student with an ID #687825 in the database
+> There is already a student with an ID #981181 in the database
+> Student 310204 record is updated: 310204,3,0
+> The roster of class 330 Spring 2011
+> Student 199352 record is updated: 199352,2,0
+> Student database: 
+190430,0,0
+199352,2,0
+291084,4,0
+310204,3,0
+687825,0,0
+729968,3,4
+981181,0,0
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 981181 record is updated: 981181,4,1
+> Student database: 
+190430,0,0
+199352,2,0
+291084,4,0
+310204,3,0
+687825,0,0
+729968,3,4
+981181,4,1
+> There is already a student with an ID #190430 in the database
+> The roster of class 402 Fall 2011
+> There is already a student with an ID #687825 in the database
+> Student database: 
+190430,0,0
+199352,2,0
+291084,4,0
+310204,3,0
+687825,0,0
+729968,3,4
+981181,4,1
+> Student 729968 record is updated: 729968,3,4
+> Student database: 
+190430,0,0
+199352,2,0
+291084,4,0
+310204,3,0
+687825,0,0
+729968,3,4
+981181,4,1
+> Student 981181 deleted
+> There is already a student with an ID #291084 in the database
+> Student database: 
+190430,0,0
+199352,2,0
+291084,4,0
+310204,3,0
+687825,0,0
+729968,3,4
+> Student database: 
+190430,0,0
+199352,2,0
+291084,4,0
+310204,3,0
+687825,0,0
+729968,3,4
+> Student 687825 record is updated: 687825,2,2
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> The roster of class 497 Spring 2010
+> Student 687825 deleted
+> There is no student with an ID #981181 in the database
+> The roster of class 497 Spring 2011
+> Student 310204 record is updated: 310204,3,3
+> Student database: 
+190430,0,0
+199352,2,0
+291084,4,0
+310204,3,3
+729968,3,4
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 199352 record is updated: 199352,2,2
+> Student database: 
+190430,0,0
+199352,2,2
+291084,4,0
+310204,3,3
+729968,3,4
+> There is already a student with an ID #190430 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is already a student with an ID #729968 in the database
+> There is no student with an ID #981181 in the database
+> There is already a student with an ID #190430 in the database
+> There is already a student with an ID #190430 in the database
+> Student 310204 record is updated: 310204,3,3
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is no student with an ID #687825 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student database: 
+190430,0,0
+199352,2,2
+291084,4,0
+310204,3,3
+729968,3,4
+> Student 190430 record is updated: 190430,1,4
+> Student 291084 record is updated: 291084,4,0
+> There is already a student with an ID #199352 in the database
+> There is no student with an ID #687825 in the database
+> Student 190430 record is updated: 190430,4,4
+> There is already a student with an ID #190430 in the database
+> Student 190430 record is updated: 190430,3,4
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> There is no student with an ID #981181 in the database
+> Student 729968 record is updated: 729968,6,4
+> There is no student with an ID #981181 in the database
+> Student 729968 record is updated: 729968,6,4
+> There is already a student with an ID #291084 in the database
+> There is no student with an ID #687825 in the database
+> Student 291084 record is updated: 291084,5,0.2
+> Student 190430 record is updated: 190430,3,4
+> Student database: 
+190430,3,4
+199352,2,2
+291084,5,0.2
+310204,3,3
+729968,6,4
+> Student 729968 record is updated: 729968,7,4
+> Student database: 
+190430,3,4
+199352,2,2
+291084,5,0.2
+310204,3,3
+729968,7,4
+> Student 190430 record is updated: 190430,3,4
+> Student added: 687825,0,0
+> Student database: 
+190430,3,4
+199352,2,2
+291084,5,0.2
+310204,3,3
+687825,0,0
+729968,7,4
+> There is already a student with an ID #310204 in the database
+> Student 291084 record is updated: 291084,5,0.2
+> Student added: 981181,0,0
+> Student 190430 record is updated: 190430,3,4
+> The roster of class 641 Spring 2013
+> Student database: 
+190430,3,4
+199352,2,2
+291084,5,0.2
+310204,3,3
+687825,0,0
+729968,7,4
+981181,0,0
+> Student 687825 record is updated: 687825,4,0
+> Student 981181 record is updated: 981181,1,4
+> Student database: 
+190430,3,4
+199352,2,2
+291084,5,0.2
+310204,3,3
+687825,4,0
+729968,7,4
+981181,1,4
+> There is already a student with an ID #190430 in the database
+> Student 291084 deleted
+> Student database: 
+190430,3,4
+199352,2,2
+310204,3,3
+687825,4,0
+729968,7,4
+981181,1,4
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 729968 record is updated: 729968,7,4
+> There is already a student with an ID #199352 in the database
+> Student database: 
+190430,3,4
+199352,2,2
+310204,3,3
+687825,4,0
+729968,7,4
+981181,1,4
+> Student database: 
+190430,3,4
+199352,2,2
+310204,3,3
+687825,4,0
+729968,7,4
+981181,1,4
+> Student database: 
+190430,3,4
+199352,2,2
+310204,3,3
+687825,4,0
+729968,7,4
+981181,1,4
+> Student database: 
+190430,3,4
+199352,2,2
+310204,3,3
+687825,4,0
+729968,7,4
+981181,1,4
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 729968 record is updated: 729968,7,4
+> Student 729968 deleted
+> There is no student with an ID #291084 in the database
+> Student 310204 record is updated: 310204,1,1
+> Student 190430 record is updated: 190430,3,4
+> The roster of class 426 Spring 2010
+> Student 687825 record is updated: 687825,7,1.71429
+> List of student pairs in the group who took courses together:
+687825,981181
+> There is already a student with an ID #981181 in the database
+> The roster of class 426 Fall 2013
+> Student database: 
+190430,3,4
+199352,2,2
+310204,1,1
+687825,7,1.71429
+981181,1,4
+> Student 199352 record is updated: 199352,2,2
+> There is no student with an ID #291084 in the database
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 687825 record is updated: 687825,4,3.25
+> Student 310204 record is updated: 310204,2,2
+> Student database: 
+190430,3,4
+199352,2,2
+310204,2,2
+687825,4,3.25
+981181,1,4
+> Student 199352 record is updated: 199352,5,2
+> Student 190430 record is updated: 190430,3,4
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> List of student pairs in the group who took courses together:
+190430,310204
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> List of student pairs in the group who took courses together:
+Cannot find a valid pair.
+> Student 981181 deleted
+> Student added: 981181,0,0
+> Quitting
